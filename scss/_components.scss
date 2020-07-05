@@ -1,80 +1,173 @@
-    .header {
-        width: 90vw;
-        height: 35vh;
-        background: $dark-blue;
-        margin: 0 auto;
-        padding: 4rem;
-        border-radius: 1.5rem 13rem 1.5rem 1.5rem;
-        position: relative;
+.header {
+    width: 90vw;
+    height: 35vh;
+    background: $dark-blue;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 1.5rem 13rem 1.5rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__logo {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &__logo {
-            display: flex;
-            margin: 1rem;
-            padding: 1rem;
-        }
-        &__logo-img {}
-        &__nav {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        &__nav-item {
-            background: $very-dark-blue;
-            height: 6rem;
-            width: 6rem;
-            margin: 1rem;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        margin: 1rem;
+        padding: 1rem;
     }
-    
-    .content {
-        width: 90vw;
-        height: 27.5vh;
-        background: $dark-blue;
-        margin: 0 auto;
-        margin-top: 2rem;
-        padding: 5rem;
-        border-radius: 1.5rem;
-        color: $pale-blue;
+    //&__logo-img {}
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__nav-item {
+        background: $very-dark-blue;
+        height: 6rem;
+        width: 6rem;
+        margin: 1rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.content {
+    width: 90vw;
+    height: 27.5vh;
+    background: $dark-blue;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 5rem;
+    border-radius: 1.5rem;
+    color: $pale-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //&__info {}
+    &__info-text {
+        font-size: 1.7rem;
+    }
+    &__status {
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 2.5rem;
+        width: 50rem;
+    }
+    &__status-full {
+        display: block;
+        background: $very-dark-blue;
+        position: relative;
+        height: 2.5rem;
+        width: 45rem;
+        border-radius: 1rem;
+        z-index: 1;
+    }
+    &__status-progress {
+        background: $primary-gradient;
+        align-self: start;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        height: 2rem;
+        width: 33rem;
+        margin-left: 2.8rem;
+        border-radius: 1rem;
+        z-index: 10;
+    }
+    &__status-progress-dot {
+        background: #fff;
+        margin: .45rem 0.3rem 0.2rem 0.2rem;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+    }
+    &__status-min-max {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        //align-items: center;
+        justify-content: space-between;
+    }
+    &__status-min,
+    &__status-max {
+        margin: 0 1rem;
+        font-size: 1.7rem;
+    }
+    &__status-data {
+        width: 45vw;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    &__status-data-remaining {
+        width: 95%;
+        height: 200%;
+        border-radius: 1.5rem;
+        background: white;
+        color: black;
+        position: absolute;
+        top: 5vh;
+        display: flex;
         justify-content: center;
         align-items: center;
-        &__info {}
-        &__info-text {}
-        &__status {
-            margin-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 2.5rem;
-            width: 50rem;
-        }
-        &__status-full {
-            display: block;
-            background: $very-dark-blue;
-            position: relative;
-            height: 2.5rem;
-            width: 45rem;
-            border-radius: 1rem;
-            z-index: 1;
-        }
-        &__status-progress {
-            background: $primary-gradient;
-            align-self: start;
-            display: block;
-            position: absolute;
-            height: 1.5rem;
-            width: 30rem;
-            margin-left: 3rem;
-            border-radius: 1rem;
-            z-index: 10;
-        }
+        font-size: 4rem;
+        font-weight: 700;
     }
+    span {
+        color: $grayish-blue;
+        margin-left: 1rem;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .content__status {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 2.5rem;
+        width: 100%;
+    }
+    .content__status-full {
+        display: block;
+        background: $very-dark-blue;
+        position: relative;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 1rem;
+        z-index: 1;
+    }
+    .content__status-progress {
+        background: $primary-gradient;
+        align-self: start;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        height: 2rem;
+        width: 80%;
+        margin-left: 0;
+        border-radius: 1rem;
+        z-index: 10;
+    }
+    .content__status-progress-dot {
+        background: #fff;
+        margin: .45rem 0.3rem 0.2rem 0.2rem;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-height: 710px) {}
