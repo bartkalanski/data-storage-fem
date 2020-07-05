@@ -1,35 +1,80 @@
-.header {
-    width: 90vw;
-    height: 40vh;
-    background: $dark-blue;
-    margin: 0 auto;
-    padding: 5rem;
-    border-radius: 1.5rem 13rem 1.5rem 1.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &__logo {
+    .header {
+        width: 90vw;
+        height: 35vh;
+        background: $dark-blue;
+        margin: 0 auto;
+        padding: 4rem;
+        border-radius: 1.5rem 13rem 1.5rem 1.5rem;
+        position: relative;
         display: flex;
-        margin: 1rem;
-        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        &__logo {
+            display: flex;
+            margin: 1rem;
+            padding: 1rem;
+        }
+        &__logo-img {}
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &__nav-item {
+            background: $very-dark-blue;
+            height: 6rem;
+            width: 6rem;
+            margin: 1rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
-    &__logo-img {}
-    &__nav {
+    
+    .content {
+        width: 90vw;
+        height: 27.5vh;
+        background: $dark-blue;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: 5rem;
+        border-radius: 1.5rem;
+        color: $pale-blue;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        &__info {}
+        &__info-text {}
+        &__status {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 2.5rem;
+            width: 50rem;
+        }
+        &__status-full {
+            display: block;
+            background: $very-dark-blue;
+            position: relative;
+            height: 2.5rem;
+            width: 45rem;
+            border-radius: 1rem;
+            z-index: 1;
+        }
+        &__status-progress {
+            background: $primary-gradient;
+            align-self: start;
+            display: block;
+            position: absolute;
+            height: 1.5rem;
+            width: 30rem;
+            margin-left: 3rem;
+            border-radius: 1rem;
+            z-index: 10;
+        }
     }
-    &__nav-item {
-        background: $very-dark-blue;
-        margin: 1rem;
-        padding: 1rem;
-        border-radius: 10px;
-    }
-}
-
-.content {
-    &__info {}
-    &__info-text {}
-    &__status {}
-}
