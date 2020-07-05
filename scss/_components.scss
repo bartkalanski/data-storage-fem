@@ -1,0 +1,35 @@
+.header {
+    width: 90vw;
+    height: 40vh;
+    background: $dark-blue;
+    margin: 0 auto;
+    padding: 5rem;
+    border-radius: 1.5rem 13rem 1.5rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__logo {
+        display: flex;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    &__logo-img {}
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__nav-item {
+        background: $very-dark-blue;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+}
+
+.content {
+    &__info {}
+    &__info-text {}
+    &__status {}
+}
