@@ -17,6 +17,7 @@
     html {
         box-sizing: border-box;
         font-size: 62.5%;
+        background: $very-dark-blue;
     }
     
     body {
@@ -38,5 +39,9 @@
     @media only screen and (min-width: 1200px) {
         body {
             background-image: url(/images/bg-desktop.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            min-height: 70vh;
         }
     }

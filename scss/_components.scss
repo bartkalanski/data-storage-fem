@@ -46,6 +46,12 @@
     justify-content: center;
     align-items: center;
     //&__info {}
+    .text {
+        color: $pale-blue;
+        margin-left: 0;
+        font-weight: 700;
+        font-size: 2rem;
+    }
     &__info-text {
         font-size: 1.7rem;
     }
@@ -129,45 +135,46 @@
     }
 }
 
-@media screen and (max-width: 430px) {
-    .content__status {
-        margin-top: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 2.5rem;
-        width: 100%;
+@media screen and (min-width: 1200px) {
+    .header {
+        width: 35vw;
+        // margin-right: 2rem;
     }
-    .content__status-full {
-        display: block;
-        background: $very-dark-blue;
-        position: relative;
-        height: 2.5rem;
-        width: 100%;
-        border-radius: 1rem;
-        z-index: 1;
-    }
-    .content__status-progress {
-        background: $primary-gradient;
-        align-self: start;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        height: 2rem;
-        width: 80%;
+    .content {
+        width: 50vw;
         margin-left: 0;
-        border-radius: 1rem;
-        z-index: 10;
-    }
-    .content__status-progress-dot {
-        background: #fff;
-        margin: .45rem 0.3rem 0.2rem 0.2rem;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 50%;
+        align-self: flex-end;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &__status {
+            width: 100%;
+        }
+        &__status-full {
+            width: 95%;
+        }
+        &__status-progress {
+            width: 70%;
+            margin-left: 1.5rem;
+        }
+        &__status-data-remaining {
+            width: 20rem;
+            height: 10rem;
+            border-radius: 1.5rem 1.5rem 0;
+            top: -26vh;
+            right: 7vh;
+            clip-path: polygon(0% 00%, 100% 0%, 100% 75%, 100% 100%, 100% 100%, 81% 75%, 0% 75%);
+        }
+        span {}
     }
 }
 
-@media only screen and (max-height: 710px) {}
+@media screen and (max-width: 430px) {
+    .content__status,
+    .content__status-full {
+        width: 100%;
+    }
+    .content__status-progress {
+        width: 80%;
+        margin-left: 0;
+    }
+}

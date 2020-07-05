@@ -11,3 +11,10 @@
     text-align: center;
     color: $pale-blue;
 }
+
+@media screen and (min-width: 1200px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
