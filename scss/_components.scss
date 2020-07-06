@@ -164,7 +164,31 @@
             right: 7vh;
             clip-path: polygon(0% 00%, 100% 0%, 100% 75%, 100% 100%, 100% 100%, 81% 75%, 0% 75%);
         }
-        span {}
+        //span {}
+    }
+}
+
+@media screen and (max-height: 730px) {
+    .content {
+        &__status-data {
+            height: 50rem;
+        }
+        &__status-data-remaining {
+            height: 10rem;
+            top: 0vh;
+        }
+    }
+}
+
+@media screen and (max-height: 415px) {
+    .content {
+        &__status-data {
+            height: 50rem;
+        }
+        &__status-data-remaining {
+            height: 10rem;
+            top: -2vh;
+        }
     }
 }
 
